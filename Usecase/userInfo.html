@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2>User Information</h2>
+    <link href="userstyle.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <form>
+		<center>
+            <input  class ="textboxsize" type="text"  id="name" autofocus autocomplete="name" placeholder="Enter Name"/><br>
+            <input type="text" id="email" pattern="[A-Za-z0-9._%+-]*(@dbs.com)"placeholder="Enter Email" class ="textboxsize" /><br>
+            
+            <input type="number" required step="10" placeholder="Enter Age" class ="textboxsize" /><br>
+            <input list="skill" placeholder="Skill Set" class ="textboxsize" >
+            <datalist id="skill">
+                <option>Angular</option>
+                <option>React</option>
+                <option>Java</option>
+                <option>Hibernate</option>
+                <option>Spring</option>
+            </datalist><br>
+            <input type="text" id="panId" pattern="[A-Za-z0-9]*" placeholder="Enter PAN  Number" class ="textboxsize" /><br>
+            <select multiple aria-placeholder="Select Language" width="250px"  >
+                    <option>Telugu</option>
+                    <option>ENGLISH</option> 
+                    <option>HINDI</option>
+                    <option>TAMIL</option>
+                    <option>MALAYALAM</option>
+                </select>
+                <br><br>
+               <!-- <input type="submit" value="SUBMIT" height="30px" width="45px" >
+                <input type="reset" value="RESET" height="30px" width="45px">-->
+				<button  type="submit"style=" background-color: mediumslateblue;color: white;">Submit</button> 
+				 <input type="reset" style="background-color: grey;color: white;">
+        
+</center>
+
+        </form>
+
+    </body>
+</html>
