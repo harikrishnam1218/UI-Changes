@@ -1,0 +1,33 @@
+*{
+    box-sizing: content-box;
+}
+.imagestyle{
+         
+    border: 5px solid cyan;
+    border-radius: 50%;
+    padding: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    width: 150px;
+    height: 70px;
+    box-sizing: content-box;
+    background-image: linear-gradient(gray,black);
+}
+       #idimage{
+           background-color: black;
+           
+       }
+       div img{
+           border-image-source: url(download.jpg);
+           border-image-repeat: repeat;
+           border: 1px solid grey;
+           border-radius: 10px;
+       }
+       div img:hover{
+           border: 4px solid brown;
+           background-image: linear-gradient(to bottom right red,white,green);
+
+       }
+
