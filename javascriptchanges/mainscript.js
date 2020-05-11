@@ -22,7 +22,9 @@ createform();
                  name.setAttribute('type', 'text');
                  name.id='name';
                  name.placeholder="Enter Name";
+                 name.pattern="[A-Za-z0-9]{5,15}"
                  name.autocomplete=true;
+                 name.required=true;
 
 
                  mobile.setAttribute("type","text");
@@ -30,30 +32,30 @@ createform();
                  mobile.placeholder="Enter Mobile Number";
                  mobile.id="mobileId";
                  mobile.autocomplete=true;
+                 mobile.pattern="[0-9]+";
+                 mobile.required=true;
 
                 sapId.setAttribute("type","number");
                 sapId.placeholder="Enter sapId";
                 sapId.autocomplete=true;
                 sapId.id="sapId";
+                sapId.required=true;
 
                 email.setAttribute("type","email");
                 email.id="emailId";
                 email.placeholder="Enter Email Id";
                 email.autocomplete=true;
+                email.required=true;
 
                 gender.setAttribute("type","text");
                 gender.placeholder="Enter Gender";
                 gender.id="genderId";
-                
-//                 idDesc.textContent="Id :";
+            
                  namedesc.textContent = "Name : ";                
                  mobiledesc.textContent="Mobile No :";
                  sapIdDesc.textContent="SAP ID :";
                  emailDesc.textContent="Email Id :";
                  genderDesc.textContent="Gender :";
-                 
-                //  div.appendChild(idDesc);
-                //  div.appendChild(id);
 
                  div.appendChild(namedesc);
                  div.appendChild(name);
@@ -97,14 +99,8 @@ createform();
 
                 document.body.appendChild(div);
                 document.body.appendChild(buttondiv);
-
-
-
-                /* document.body.appendChild(name);
-                 document.body.appendChild(mobiledesc);
-                 document.body.appendChild(mobile);*/
-        
             }
+
             function createData(){
                 //var id= document.getElementById("id").value;
                 var name=document.getElementById("name").value;
@@ -112,6 +108,21 @@ createform();
                 var sapId=document.getElementById("sapId").value;
                 var email=document.getElementById("emailId").value;
                 var gender=document.getElementById("genderId").value;
+
+                    if(!name.length>0){
+                         alert("Please Enter Name");
+                         return;
+                    }else if(!mobile.length>0){
+                          alert("Please Enter Mobile No");    
+                          return;       
+                     }else if(!sapId.length>0){
+                            alert("Please Enter SAPID");   
+                            return;        
+                     }else if(!email.length>0){
+                           alert("Please Enter Email Id"); 
+                           return;          
+                     }
+
                 var obj={"name":name,"mobile":mobile,"sapId":sapId,"email":email,"gender":gender};
                 var httpReq;
                 if(window.XMLHttpRequest){
@@ -130,9 +141,6 @@ createform();
                 //httpReq.send(obj);
                 httpReq.setRequestHeader("Content-type","application/json");
                 httpReq.send(JSON.stringify(obj));
-               // console.log("name "+name+"mobile"+mobile+"sapId"+sapId+"email"+email+"gender"+gender);
-
-
             }
 
             function getData(){
@@ -199,11 +207,6 @@ createform();
                         headTr.appendChild(headTd7);
 
                         thead.appendChild(headTr);
-
-
-                        //var buttondiv=  document.createElement("table");
-
-
                         var data=JSON.parse(this.response);
                         console.log(data);
                         var len=data.length;
@@ -254,17 +257,12 @@ createform();
                             var updateeText = document.createTextNode('UPDATE');        
                             updateButton.appendChild(updateeText);  
                            
-                           // updateButton.setAttribute('onclick', 'updateData()');
-
-
                             var td7=  document.createElement("td");
                             
                             td7.appendChild(deleteButton);
-                           
 
                            var td8=  document.createElement("td");
                            td8.appendChild(updateButton);
-
 
                              tbodyTr.appendChild(td1);
                              tbodyTr.appendChild(td2); 
@@ -275,8 +273,7 @@ createform();
                              tbodyTr.appendChild(td7);
                              tbodyTr.appendChild(td8);
 
-                             tbody.appendChild(tbodyTr);
-                         //   console.log(data[i].name,data[i].sapId);
+                             tbody.appendChild(tbodyTr);                         
                         }
                         table.appendChild(thead);
                         }else{
