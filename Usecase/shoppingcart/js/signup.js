@@ -5,6 +5,15 @@ function signup() {
     var mobile = document.getElementById("mobile").value;
     var address = document.getElementById("textarea").value;
     var emailPattern = "[A-Za-z0-9._%+-]*(@dbs.com|@hcl.com)";
+    var passwordpattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@$&]).{8,12}$";
+    
+    if(!password.length>0){
+        alert("please Enter Email ID");
+        return false;
+    }else if(!password.match(passwordpattern)){
+        alert("Please Enter Valid Password");
+        return false;
+    }
     if (name === null || !name.length > 0) {
         alert("Please Enter name");
         return false;
