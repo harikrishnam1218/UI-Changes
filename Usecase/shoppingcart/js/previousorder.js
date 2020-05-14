@@ -1,5 +1,5 @@
 function previousorder() {
-document.getElementById("headerProductId").innerHTML="ORDER LIST";
+document.getElementById("headerProductId").innerHTML=" PREVIOUS ORDER LIST";
     var btable = document.getElementsByTagName("table").length;
     if (btable > 0) {
         var removeTab = document.getElementById('table');

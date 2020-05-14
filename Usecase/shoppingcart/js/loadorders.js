@@ -1,5 +1,14 @@
 fetchproducts();
 function fetchproducts() {
+    document.getElementById("headerProductId").innerHTML="PRODUCTS LIST";
+    
+    var btable=document.getElementsByTagName("table").length;
+    if(btable>0){
+       var removeTab = document.getElementById('table');
+       var parentEl = removeTab.parentElement;
+           parentEl.removeChild(removeTab);
+   }
+  
     var url = "http://localhost:3000/products";
     var httpReq;
     if (window.XMLHttpRequest) {
@@ -16,11 +25,9 @@ function fetchproducts() {
             table.id = "table";
             var tbody = document.createElement("tbody");
             var thead = document.createElement("thead");
-
             var headTr = document.createElement("tr");
-
             var headTd1 = document.createElement("td");
-            var headTd1Text = document.createTextNode("PRODUCT ANME")
+            var headTd1Text = document.createTextNode("PRODUCT NAME")
             headTd1.appendChild(headTd1Text);
 
             var headTd2 = document.createElement("td");
@@ -92,16 +99,14 @@ function fetchproducts() {
                     qtext.setAttribute("id", "quantity" + data[i].id);
                     qtext.setAttribute("size", 1);
                     qtext.setAttribute("step", "1");
-                    qtext.setAttribute("value", "1");
-                    //var td5Text=  document.createTextNode(qtext);
+                    qtext.setAttribute("value", "1");                  
                     td5.appendChild(qtext);
 
 
                     var td6 = document.createElement("td");
                     var addcartButton = document.createElement('button');
 
-                    addcartButton.addEventListener('click', function () {
-                        console.log(this);
+                    addcartButton.addEventListener('click', function () {                        
                         var data1 = this.parentElement.parentElement.cells;
                         //console.log(data1);
                         var id1 = data1[0].innerHTML;
@@ -120,9 +125,33 @@ function fetchproducts() {
                         //  //JSON.parse(existing);
                         //  existing = existing ? existing.split(',') : [];
                         //  existing =existing.pushArrayItem(ob1);
+                   // window.sessionStorage.setItem("cartData", JSON.stringify(ob1));
+                    var emailId = sessionStorage.getItem("userId");
+                    if(emailId===null){
+                        alert("Please Login again");
+                        return false;
+                    }
+                    var cartdata = {
+                        "productId": data1[0].innerHTML, "productName": data1[1].innerHTML,"email":emailId,
+                        "price": data1[4].innerHTML, "description": data1[2].innerHTML, "rating": data1[3].innerHTML, "quantity": quantityvalue
+                    };
+                   var cartUrl= "http://localhost:3000/cartItems";
+                    var httpReq;
+                    if(window.XMLHttpRequest){
+                        httpReq=new XMLHttpRequest();
+                    }else{
+                        httpReq=ActiveXObject("");
+                    }
+                    httpReq.onreadystatechange=function(){
+                        if(this.readyState===4 && this.status===201){
+                        //alert("added to cart Successfully!!");
+                         console.log(this.response);                
+                        }
+                    }
+                    httpReq.open("post",cartUrl,true);
+                    httpReq.setRequestHeader("Content-type","application/json");
+                    httpReq.send(JSON.stringify(cartdata));
 
-
-                        window.sessionStorage.setItem("cartData", JSON.stringify(ob1));
                     });
                     var addcartText = document.createTextNode('addcart');
                     addcartButton.appendChild(addcartText);
