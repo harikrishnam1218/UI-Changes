@@ -43,7 +43,7 @@ function createform(){
                 email.placeholder="Enter Email Id";
                 email.autocomplete=true;
                 email.required=true;
-                email.pattern="[A-Za-z0-9]+.[gmail|dbs.com]"
+                email.pattern="[A-Za-z0-9]+@[hcl.com|dbs.com]"
 
                 gender.setAttribute("type","text");
                 gender.placeholder="Enter Gender";
