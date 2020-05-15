@@ -1,0 +1,26 @@
+body{
+    background-color: darkseagreen
+}
+table{
+    background-color: bisque;
+}
+table tbody tr td {
+    border: 1px solid brown;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+}
+
+table thead tr td {
+    border: 2px solid brown;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    color: blue;
+}
+
+h1 {
+    color: chartreuse;
+    font-family: Arial;
+    text-align: center;
+}

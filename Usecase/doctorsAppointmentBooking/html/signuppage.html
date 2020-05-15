@@ -9,7 +9,7 @@
  
         </style>
         <header>
-                <a href="loginpage.html">Login</a>
+                <a href="logindoctorappointment.html">Login</a>
             </header>
             <link href="../css/signup.css" rel="stylesheet"/>
     </head>
@@ -25,17 +25,16 @@
                         <label for="email"><b>Email ID</b></label>
                         <input id="emailId" type="email" placeholder="Enter Email ID"  autocomplete name="email" required><br>
                        
-                        <label for="psw"><b>Password</b></label>
-                        <input id="pwd" type="password" placeholder="Enter Password" autocomplete name="pwd" required min="8"><br>
-
                         <label for="mobile"><b>Mobile No :</b></label>
-                        <input type="text" name="country code"  value="+91" size="2"/> 
                         <input id="mobile" type="number" name="mobile" size="10" required placeholder ="Enter Mobile No"
                          autocomplete/> <br>
-                       
-                        <label for="address"><b>Address :</b></label>
-                        <textarea id="textarea"  cols="60" rows="4" value="address"></textarea><br>
 
+                         <label for="role"><b>Role</b></label>
+
+                         <select id="roles">
+                                <option width="50px" value="patient">Patient</option>
+                                <option value="doctor">Doctor</option>
+                        </select><br>
                         <button type="button" onclick="userData()">SignUp</button>
                         
                       </div>   

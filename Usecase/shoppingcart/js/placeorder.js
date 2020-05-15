@@ -53,13 +53,6 @@ function placeorder() {
                         httpReq.send(JSON.stringify(dataobj));
                     }
                 }
-
-
-
-
-
-
-
             } else {
                 alert("Please add Cart Items");
             }

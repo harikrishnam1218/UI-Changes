@@ -1,0 +1,44 @@
+body {
+    background-color:burlywood;
+}
+ h1{
+   color: #ea503f;
+   font-family: Arial;
+   text-align: center;
+   
+ }
+ .container {
+  padding: 20px;
+  margin: 1px solid blanchedalmond;
+}
+header{
+    float: right;
+    background-color:palegoldenrod;
+    border: 2px solid black;
+}
+header a{
+    font-size:15px;
+    color: blue;
+}
+h1{
+   color: moccasin;
+   font-family: Arial;
+   text-align: center;
+   
+ }
+ button {
+    align-items: center;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+label {
+    margin-left: 10px;
+    margin-right: 20px;
+}

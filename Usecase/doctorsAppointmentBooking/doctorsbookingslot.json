@@ -1,0 +1,189 @@
+{
+  "users": [
+    {
+      "name": "hari1218",
+      "mobile": "9700608689",
+      "email": "harikrishna.maris@hcl.com",
+      "password": 877435,
+      "role": "patient",
+      "id": 2
+    },
+    {
+      "name": "hari",
+      "mobile": "9700608689",
+      "email": "harikrishna.maris11@hcl.com",
+      "password": 837537,
+      "role": "patient",
+      "id": 3
+    },
+    {
+      "name": "hari1218",
+      "mobile": "9700608689",
+      "email": "harikrishna.maris1222@hcl.com",
+      "password": 701559,
+      "role": "patient",
+      "id": 4
+    },
+    {
+      "name": "hari",
+      "mobile": "9700608689",
+      "email": "harikrishna.maris666@hcl.com",
+      "password": 947158,
+      "role": "doctor",
+      "id": 5
+    },
+    {
+      "name": "Harikrishna",
+      "mobile": "9176110002",
+      "email": "hari@dbs.com",
+      "password": 793421,
+      "role": "doctor",
+      "id": 6
+    },
+    {
+      "name": "hari1218",
+      "mobile": "9176110002",
+      "email": "hari12@dbs.com",
+      "password": 795310,
+      "role": "patient",
+      "id": 7
+    },
+    {
+      "name": "test1",
+      "mobile": "9700608689",
+      "email": "harikrishna1@dbs.com",
+      "password": 286887,
+      "role": "patient",
+      "id": 8
+    },
+    {
+      "name": "hari1218",
+      "mobile": "9700608689",
+      "email": "harikrishna1@hcl.com",
+      "password": 943112,
+      "role": "patient",
+      "id": 9
+    }
+  ],
+  "slots": [
+    {
+      "available": false,
+      "docmail": "harikrishna.maris666@hcl.com",
+      "date": "2020-05-14",
+      "time": "10:50",
+      "specialist": "nuro",
+      "id": 2
+    },
+    {
+      "available": false,
+      "docmail": "harikrishna.maris666@hcl.com",
+      "date": "2020-05-14",
+      "time": "12:30",
+      "specialist": "neuro",
+      "id": 3
+    },
+    {
+      "available": false,
+      "docmail": "harikrishna.maris666@hcl.com",
+      "date": "2020-05-15",
+      "time": "12:00",
+      "specialist": "ortho",
+      "id": 4
+    },
+    {
+      "docmail": "hari@dbs.com",
+      "date": "2020-05-15",
+      "time": "10:20",
+      "specialist": "Nuro",
+      "available": true,
+      "id": 5
+    },
+    {
+      "docmail": "hari@dbs.com",
+      "date": "2020-05-15",
+      "time": "12:20",
+      "specialist": "Nuro",
+      "available": true,
+      "id": 6
+    },
+    {
+      "docmail": "hari@dbs.com",
+      "date": "2020-05-15",
+      "time": "20:10",
+      "specialist": "sdvds",
+      "available": true,
+      "id": 7
+    },
+    {
+      "docmail": "hari@dbs.com",
+      "date": "2020-05-15",
+      "time": "12:00",
+      "specialist": "hbhbbh",
+      "available": true,
+      "id": 8
+    },
+    {
+      "docmail": "hari@dbs.com",
+      "date": "2020-05-15",
+      "time": "02:00",
+      "specialist": "sca",
+      "available": true,
+      "id": 9
+    },
+    {
+      "docmail": "hari@dbs.com",
+      "date": "2020-05-15",
+      "time": "02:00",
+      "specialist": "ccc",
+      "available": true,
+      "id": 10
+    },
+    {
+      "docmail": "hari@dbs.com",
+      "date": "2020-05-16",
+      "time": "03:00",
+      "specialist": "sca",
+      "available": true,
+      "id": 11
+    },
+    {
+      "docmail": "hari@dbs.com",
+      "date": "2020-05-16",
+      "time": "04:00",
+      "specialist": "sca",
+      "available": true,
+      "id": 12
+    }
+  ],
+  "appointment": [
+    {
+      "slotId": "4",
+      "docmail": "harikrishna.maris666@hcl.com",
+      "date": "2020-05-15",
+      "time": "12:00",
+      "specialist": "ortho",
+      "userId": "hari12@dbs.com",
+      "id": 4,
+      "reason": "test"
+    },
+    {
+      "slotId": "2",
+      "docmail": "harikrishna.maris666@hcl.com",
+      "date": "2020-05-14",
+      "time": "10:50",
+      "specialist": "nuro",
+      "userId": "harikrishna.maris@hcl.com",
+      "id": 5
+    },
+    {
+      "slotId": "3",
+      "docmail": "harikrishna.maris666@hcl.com",
+      "date": "2020-05-14",
+      "time": "12:30",
+      "specialist": "neuro",
+      "userId": "harikrishna.maris@hcl.com",
+      "reason": "Test",
+      "id": 6
+    }
+  ]
+}
