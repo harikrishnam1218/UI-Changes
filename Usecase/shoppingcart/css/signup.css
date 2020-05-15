@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+    background-color: rgb(120, 124, 124);
 }
  h1{
    color: #ea503f;
@@ -20,12 +20,7 @@ header a{
     font-size:15px;
     background-color: blanchedalmond;
 }
-h1{
-   color: #ea503f;
-   font-family: Arial;
-   text-align: center;
-   
- }
+
  button {
     align-items: center;
     width: 100px;
