@@ -1,3 +1,6 @@
+/**
+ * The Function will check the authentication and based on role the page will redirect to Patient view or Doctor View
+ */
 function loginData(){
     var emailId=document.getElementById("emailId").value;
     var password=document.getElementById("pwd").value;
@@ -18,7 +21,7 @@ function loginData(){
                 if(len>0){
                     var userRole=data[0].role;
                     window.sessionStorage.setItem("userId",emailId);
-                alert("Login Successful !!");
+               // alert("Login Successful !!");
                 if(userRole==="patient"){
                     window.location.assign("patientpage.html");
                 }else{
@@ -26,10 +29,29 @@ function loginData(){
                 }
                     
                 }else{
-                    alert("login Failed");
+                    alert("login Failed, Please try again");
                 }
             }
         }
         httpReq.open("get",url,true);
         httpReq.send();
+}
+/**
+ * Redirecting to Login page
+*/
+function redirectSignUpPage(){
+    window.location.href = "signuppage.html";
+}
+/**
+ * Redirecting to Home page
+*/
+function redirectHomepage(){
+    window.location.href = "homepage.html";
+}
+
+/**
+ * Redirecting to Home page
+*/
+function redirectAboutPage(){
+    window.location.href = "aboutpage.html";
 }

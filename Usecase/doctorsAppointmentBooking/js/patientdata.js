@@ -1,4 +1,7 @@
 loadSlotData();
+/**
+ * The Function will load the Slot relared Data Provided By Doctor Availability
+ */
 function loadSlotData() {
     var btable = document.getElementsByTagName("table").length;
     if (btable > 0) {
@@ -39,7 +42,7 @@ function loadSlotData() {
             headTd3.appendChild(headTd3Text);
 
             var headTd4 = document.createElement("td");
-            var headTd4Text = document.createTextNode("Time");
+            var headTd4Text = document.createTextNode("Time (24 Hours Format)");
             headTd4.appendChild(headTd4Text);
 
             var headTd5 = document.createElement("td");
@@ -94,9 +97,13 @@ function loadSlotData() {
                     var td5 = document.createElement("td");
                     var td5Text = document.createTextNode(data[i].specialist);
                     td5.appendChild(td5Text);
+                            var availableStatus="Slot Booked";
+                    if(data[i].available!=undefined  && data[i].available===true){
+                        availableStatus=" Slot available";
+                    }
 
                     var td6 = document.createElement("td");
-                    var td6Text = document.createTextNode(data[i].available);
+                    var td6Text = document.createTextNode(availableStatus);
                     td6.appendChild(td6Text);
 
 
@@ -116,6 +123,7 @@ function loadSlotData() {
                     if (data[i].available != null && data[i].available === false) {
                         slotButton.setAttribute("disabled", true)
                     }
+                    //Patient Can Book the Slot provided by the Doctor availability
                     slotButton.addEventListener('click', function () {
                         var data1 = this.parentElement.parentElement.cells;
 
@@ -139,9 +147,8 @@ function loadSlotData() {
                             "slotId": slotId, "docmail": docmail,
                             "date": date, "time": time, "specialist": spec, "userId": emailId,"reason":reason
                         };
-                        console.log("reason :"+reason);
 
-                    /* AJAX Call For Book Appointment for Doctor  */
+                    /* AJAX Call For Patient Book Appointment for Doctor Availability  */
 
                         var bookingUrl = "http://localhost:3000/appointment";
                         var httpReq;
@@ -162,7 +169,7 @@ function loadSlotData() {
                                     return false;
                                 }
 
-                            /* AJAX Call For updating status after confirming Booking   */
+                            /* AJAX Call For updating status after confirming Booking Slot  */
 
                                 var url = "http://localhost:3000/slots/" + slotId;
                                 var ob2 = { "available": false, "docmail": docmail, "date": date, "time": time, "specialist": spec };
@@ -181,7 +188,6 @@ function loadSlotData() {
                                 httpReq.open("put", url, true);
                                 httpReq.setRequestHeader("Content-type", "application/json");
                                 httpReq.send(JSON.stringify(ob2));
-
 
                                 alert("slot has been booked ");
                             }

@@ -12,14 +12,10 @@ body {
   margin: 1px solid blanchedalmond;
 }
 header{
-    float: right;
-    background-color: aquamarine;
-    border: 2px solid black;
+    background-color: darkorchid;
+    border: 1px solid black;
 }
-header a{
-    font-size:15px;
-    background-color: blanchedalmond;
-}
+
 h1{
    color: #ea503f;
    font-family: Arial;

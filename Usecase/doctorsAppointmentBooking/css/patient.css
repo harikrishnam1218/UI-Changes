@@ -1,5 +1,5 @@
 body{
-    background-color: darkseagreen
+    background-color: beige;
 }
 table{
     background-color: bisque;
@@ -20,7 +20,18 @@ table thead tr td {
 }
 
 h1 {
-    color: chartreuse;
-    font-family: Arial;
+    color: teal;
+    font-family: INITIAL;
     text-align: center;
+    text-decoration: underline;
+}
+
+ button {
+    align-items: center;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: gold;
 }

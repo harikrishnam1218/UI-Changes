@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <titile>Doctors Appointment Booling</titile>
+        <title>Doctors Appointment Booking</title>
  <style>
  
  </style>       
@@ -9,24 +9,29 @@
      <a href="doctorpage.html">Redirect To Home</a>
  </header>
  <link href="../css/addslot.css" rel="stylesheet"/>
- <h1> Add Slot Form</h1>
+ 
     </head>
+    <h1> Add Slot Form</h1>
     <body>
             <script src="../js/addslot.js"></script>
+            <center>
             <div class="container">
+                <div id="errdate"></div>
                 <label for="dateId"><b>Date :</b></label>
                 <input id="dateId" type="date"  name="date" required><br>
           
-                <label for="timeId"><b>Time :</b></label>
+                <div id="errtime"></div>
+                <label for="timeId"><b>Time (24 Hour Format) :</b></label>
                 <input id="timeId" type="time"  name="time" required><br>
                 
-                
+                <div id="errspecialist"></div>
                 <label for="specialist"><b>Specialization :</b></label>
                 <input id="specialist" type="text"  name="specialist" placeholder="Enter Specialization" autocomplete="" required><br>
           
                 <button type="submit" onclick="checkSlotAvailable()">addSlot</button>
                 
               </div>
+            </center>
         
     </body>
 </html>

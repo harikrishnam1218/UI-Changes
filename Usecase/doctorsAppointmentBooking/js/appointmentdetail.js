@@ -1,6 +1,10 @@
 loadAppointmentData();
-function loadAppointmentData() {
-    
+/**
+ *The LoadAppointmentData function will  Load Appointment Details in Doctor View Page.
+*/
+
+function loadAppointmentData() {    
+    //If the table already available Remove table
     var btable=document.getElementsByTagName("table").length;
     if(btable>0){
        var removeTab = document.getElementById('table');
@@ -19,7 +23,7 @@ function loadAppointmentData() {
         if (this.readyState === 4 && this.status === 200) {
             var data = JSON.parse(this.response);
             console.log(data);
-
+            //Creating Table and Header
             var table = document.createElement("table");
             table.id = "table";
             var tbody = document.createElement("tbody");
@@ -38,7 +42,7 @@ function loadAppointmentData() {
             headTd3.appendChild(headTd3Text);
 
             var headTd4 = document.createElement("td");
-            var headTd4Text = document.createTextNode("Time");
+            var headTd4Text = document.createTextNode("Time (24 Hours Format)");
             headTd4.appendChild(headTd4Text);
             
             var headTd5 = document.createElement("td");
@@ -95,8 +99,6 @@ function loadAppointmentData() {
                     tbodyTr.appendChild(td4);
                     tbodyTr.appendChild(td5);
                     tbodyTr.appendChild(td6);
-
-
                     tbody.appendChild(tbodyTr);
                 }
                 table.appendChild(thead);
@@ -116,6 +118,9 @@ function loadAppointmentData() {
     httpReq.open("get", url, true);
     httpReq.send();
 }
+/**
+ * Redirecting to Slot page
+*/
 function redirectAddSlot(){
     window.location.href = "addslot.html";
 }

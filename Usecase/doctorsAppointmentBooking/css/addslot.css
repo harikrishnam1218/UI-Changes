@@ -1,15 +1,17 @@
 body {
     background-color:burlywood;
 }
- h1{
-   color: #ea503f;
-   font-family: Arial;
-   text-align: center;
-   
- }
+h1 {
+    color: darkblue;
+    font-family: Arial;
+    text-align: center;
+    text-decoration: underline;
+}
  .container {
-  padding: 20px;
-  margin: 1px solid blanchedalmond;
+    padding: 20px;
+    background-color: aliceblue;
+    width: 600px;
+    height: 300px;
 }
 header{
     float: right;
@@ -33,12 +35,17 @@ h1{
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 100px;
+    background-color: chocolate;
 }
 input {
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 20px;
+    display: inline;
 }
 label {
     margin-left: 10px;
     margin-right: 20px;
+}
+.color-class{
+    color:red;    
 }

@@ -1,0 +1,15 @@
+img{
+    position: reltive;
+    width:100%;
+    }
+    h2 {
+        color: #ea503f;
+        font-family: Arial;
+        text-align: center;
+        text-decoration: underline;
+    }
+    a{
+        text-align-last: right;
+        margin-right: 5px;
+        float: right;
+        }
