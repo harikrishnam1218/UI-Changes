@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SignUp Page
+        </title>
+        
+        <style>
+ 
+        </style>
+        <header>
+                <a href="loginpage.html">Login</a>
+            </header>
+            <link href="../css/signup.css" rel="stylesheet"/>
+    </head>
+    <body >
+            <h1><b>Registration Form</b></h1>
+        <script src="../js/signup.js"></script>
+        <form>
+
+                <div class="container">
+                        <label for="name"><b>Username</b></label>
+                        <input id="name" type="text" placeholder="Enter Username"  autocomplete
+                         name="name" required><br>
+                       
+                        <label for="email"><b>Email ID</b></label>
+                        <input id="emailId" type="email" placeholder="Enter Email ID"  autocomplete name="email" required><br>
+                       
+                        <label for="psw"><b>Password</b></label>
+                        <input id="pwd" type="password" placeholder="Enter Password" autocomplete name="pwd" required min="8"><br>
+
+                        <label for="mobile"><b>Mobile No :</b></label>
+                        <input type="text" name="countrycode"  value="+91" size="2"/> 
+                        <input id="mobile" type="number" name="mobile" size="10" required placeholder ="Enter Mobile No"
+                         autocomplete/> <br>
+                       
+                        <label for="address"><b>Address :</b></label>
+                        <textarea id="textarea"  cols="60" rows="4" value="address"></textarea><br>
+
+                        <button type="button" onclick="userData()">SignUp</button>
+                        
+                      </div>   
+        </form>         
+    </body>
+</html>
