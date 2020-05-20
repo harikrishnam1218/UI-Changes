@@ -1,128 +1,80 @@
 {
   "users": [
     {
-      "name": "HARI1218",
-      "mobile": "9176110002",
-      "email": "hari23@gmail.com",
-      "password": "abc123@A",
-      "address": "1-14b,macahavaram",
+      "name": "swarupa",
+      "mobile": "9700608689",
+      "email": "swarupa@hcl.com",
+      "password": "Amma1991@",
+      "address": "14B",
       "id": 1
     },
     {
-      "name": "HARI11218",
-      "mobile": "65874523",
-      "email": "hari243@gmail.com",
-      "password": "abc123@A",
-      "address": "1-14b,macahavaram",
+      "name": "Chaitanya",
+      "mobile": "9700608689",
+      "email": "Chaitanya@dbs.com",
+      "password": "Amma1991@",
+      "address": "wd",
       "id": 2
     },
     {
-      "name": "hari1218",
+      "name": "Indra",
       "mobile": "9700608689",
-      "email": "harikrishnam1218@gmail.com",
-      "password": "123654789",
-      "address": "521,hav,523105",
+      "email": "indra@hcl.com",
+      "password": "Amma1991@",
+      "address": "dvD",
       "id": 3
     },
     {
-      "name": "hari1218",
+      "name": "Indra",
       "mobile": "9700608689",
-      "email": "hari1218krishna@gmail.com",
-      "password": "123654789",
-      "address": "mari, hjvsfh,hjvhjsa,562310",
+      "email": "indra1@hcl.com",
+      "password": "Amma1991@",
+      "address": "dvD",
       "id": 4
     },
     {
-      "name": "hari1218",
+      "name": "Indra",
       "mobile": "9700608689",
-      "email": "harikrishna.maris@hcl.com",
+      "email": "indra3@hcl.com",
       "password": "Amma1991@",
-      "address": "sss",
+      "address": "dvD",
       "id": 5
     },
     {
       "name": "swarupa",
-      "mobile": "9176110002",
-      "email": "harikrishna.maris2@hcl.com",
-      "password": "Amma1991@",
-      "address": "m kdsjnkjn jkjkbjd",
+      "mobile": "9700608689",
+      "email": "swarupa1212@hcl.com",
+      "password": 633827,
+      "role": "patient",
       "id": 6
     },
     {
-      "name": "hari1218",
-      "mobile": "9700608689",
-      "email": "harikrishna.maris4@hcl.com",
-      "password": "123456",
-      "address": "bhbhbhb  h j j jh hj",
-      "id": 7
-    },
-    {
-      "name": "hari1218",
-      "mobile": "9700608689",
-      "email": "harikrishna.maris4@hcl.com",
-      "password": "123456",
-      "address": "bhbhbhb  h j j jh hj",
-      "id": 8
-    },
-    {
-      "name": "hari1218",
-      "mobile": "9700608689",
-      "email": "harikrishna.maris@hcl.com",
-      "password": "Amma1991@",
-      "address": "1111,5555",
-      "id": 9
-    },
-    {
-      "name": "hari1218",
-      "mobile": "9700608689",
-      "email": "harikrishna.maris@hcl.com",
-      "password": "Amma1991@",
-      "address": "55555,555555",
-      "id": 10
-    },
-    {
-      "name": "swarupa",
-      "mobile": "9700608689",
-      "email": "harikrishna@hcl.com",
-      "password": "Amma1991@",
-      "address": "1-14B,Machavaram",
-      "id": 11
-    },
-    {
-      "name": "hari",
+      "name": "harikrishna",
       "mobile": "9700608689",
       "email": "harikrishna1@hcl.com",
-      "password": "Amma1991@",
-      "address": "bcxdfbcxnbfnn ",
-      "id": 12
-    },
-    {
-      "name": "hari",
-      "mobile": "9700608689",
-      "email": "harikrishna12@hcl.com",
-      "password": "Amma1991@",
-      "address": "aDcSACWQ",
-      "id": 13
+      "password": 444306,
+      "role": "doctor",
+      "id": 7
     }
   ],
   "products": [
     {
       "id": 1,
-      "productname": "Milk",
+      "productName": "Milk",
       "price": 200,
       "description": "Milk Product",
       "rating": "3"
     },
     {
       "id": 2,
-      "productname": "TVS Motor",
+      "productName": "TVS Motor",
       "price": 20000,
       "description": "TVS MOTOR BIKE",
       "rating": "5"
     },
     {
       "id": 3,
-      "productname": "HERO  Motor",
+      "productName": "HERO  Motor",
       "price": 50000,
       "description": "HERO MOTOR BIKE",
       "rating": "5"
@@ -130,149 +82,106 @@
   ],
   "orders": [
     {
-      "id": 1,
-      "productId": "1",
-      "email": "hari1218krishna@gmail.com",
-      "totalPrice": 200,
-      "quantity": 2,
-      "orderDate": "05-13-2020"
-    },
-    {
-      "productId": "1",
-      "email": "harikrishnam1218@gmail.com",
-      "totalPrice": 200,
-      "quantity": "1",
-      "orderDate": "05-13-2020",
-      "id": 2
-    },
-    {
-      "productId": "1",
-      "email": "harikrishnam1218@gmail.com",
-      "totalPrice": 200,
-      "quantity": "1",
-      "orderDate": "05-13-2020",
-      "id": 3
-    },
-    {
-      "productId": "1",
-      "email": "harikrishnam1218@gmail.com",
-      "totalPrice": 200,
-      "quantity": "1",
-      "orderDate": "05-13-2020",
-      "id": 4
-    },
-    {
-      "productId": "1",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 200,
-      "quantity": "1",
-      "orderDate": "05-13-2020",
-      "id": 5
-    },
-    {
-      "productId": "2",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 20000,
-      "quantity": "1",
-      "orderDate": "05-13-2020",
-      "id": 6
-    },
-    {
-      "productId": "1",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 600,
-      "quantity": "3",
-      "orderDate": "05-13-2020",
-      "id": 7
-    },
-    {
-      "productId": "2",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 20000,
-      "quantity": "1",
-      "orderDate": "05-13-2020",
-      "id": 8
-    },
-    {
-      "productId": "3",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 50000,
-      "quantity": "1",
-      "orderDate": "05-14-2020",
-      "id": 9
-    },
-    {
-      "productId": "2",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 60000,
-      "quantity": "3",
-      "orderDate": "05-14-2020",
-      "id": 10
-    },
-    {
-      "productId": "3",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 100000,
-      "quantity": "2",
-      "orderDate": "05-14-2020",
-      "id": 11
-    },
-    {
-      "productId": "2",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 60000,
-      "quantity": "3",
-      "orderDate": "05-14-2020",
-      "id": 12
-    },
-    {
-      "productId": "2",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 60000,
-      "quantity": "3",
-      "orderDate": "05-14-2020",
-      "id": 13
-    },
-    {
-      "productId": "2",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 60000,
-      "quantity": "3",
-      "orderDate": "05-14-2020",
-      "id": 14
-    },
-    {
-      "productId": "2",
-      "email": "harikrishna.maris@hcl.com",
-      "totalPrice": 80000,
-      "quantity": "4",
-      "orderDate": "05-14-2020",
-      "id": 15
-    },
-    {
       "productId": 1,
-      "email": "harikrishna.maris2@hcl.com",
-      "totalPrice": 600,
-      "quantity": "3",
-      "orderDate": "05-14-2020",
-      "id": 16
+      "email": "swarupa@hcl.com",
+      "totalPrice": 200,
+      "quantity": "1",
+      "orderDate": {},
+      "id": 1
     },
     {
       "productId": 2,
-      "email": "harikrishna.maris2@hcl.com",
-      "totalPrice": 60000,
-      "quantity": "3",
-      "orderDate": "05-14-2020",
-      "id": 17
+      "email": "swarupa@hcl.com",
+      "totalPrice": 20000,
+      "quantity": "1",
+      "orderDate": {},
+      "id": 2
     },
     {
       "productId": 3,
-      "email": "harikrishna.maris2@hcl.com",
-      "totalPrice": 150000,
+      "email": "swarupa@hcl.com",
+      "totalPrice": 50000,
+      "quantity": "1",
+      "orderDate": {},
+      "id": 3
+    },
+    {
+      "productId": 1,
+      "email": "swarupa@hcl.com",
+      "totalPrice": 200,
+      "quantity": "1",
+      "orderDate": {},
+      "id": 4
+    },
+    {
+      "productId": 2,
+      "email": "swarupa@hcl.com",
+      "totalPrice": 20000,
+      "quantity": "1",
+      "orderDate": {},
+      "id": 5
+    },
+    {
+      "productId": 1,
+      "email": "swarupa@hcl.com",
+      "totalPrice": 200,
+      "quantity": "1",
+      "orderDate": "05-19-2020",
+      "id": 6
+    },
+    {
+      "productId": 2,
+      "email": "swarupa@hcl.com",
+      "totalPrice": 20000,
+      "quantity": "1",
+      "orderDate": "05-19-2020",
+      "id": 7
+    },
+    {
+      "productId": "1",
+      "email": "Chaitanya@dbs.com",
+      "totalPrice": 800,
+      "quantity": "4",
+      "orderDate": "05-20-2020",
+      "id": 8
+    },
+    {
+      "productId": "2",
+      "email": "Chaitanya@dbs.com",
+      "totalPrice": 60000,
       "quantity": "3",
-      "orderDate": "05-14-2020",
-      "id": 18
+      "orderDate": "05-20-2020",
+      "id": 9
+    },
+    {
+      "productId": "3",
+      "email": "Chaitanya@dbs.com",
+      "totalPrice": 200000,
+      "quantity": "4",
+      "orderDate": "05-20-2020",
+      "id": 10
     }
   ],
-  "cartItems": []
+  "cartItems": [
+    {
+      "productId": "1",
+      "productName": "Milk",
+      "email": "swarupa@hcl.com",
+      "price": "200",
+      "description": "Milk Product",
+      "rating": "3",
+      "quantity": "1",
+      "id": 1
+    },
+    {
+      "productId": "2",
+      "productName": "TVS Motor",
+      "email": "swarupa@hcl.com",
+      "price": "20000",
+      "description": "TVS MOTOR BIKE",
+      "rating": "5",
+      "quantity": "1",
+      "id": 2
+    }
+  ]
 }

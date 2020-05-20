@@ -1,0 +1,52 @@
+body {
+    background-color:burlywood;
+}
+h1 {
+    color: darkblue;
+    font-family: Arial;
+    text-align: center;
+    text-decoration: underline;
+}
+ .container {
+    padding: 20px;
+    background-color: aliceblue;
+    width: 600px;
+    height: 300px;
+}
+
+
+header{
+    float: right;
+    color:blue;
+}
+header a{
+    font-size:15px;
+    color: blue;
+}
+h1{
+   color: moccasin;
+   font-family: Arial;
+   text-align: center;
+   
+ }
+ button#btn {
+    align-items: center;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 100px;
+    background-color: chocolate;
+}
+input {
+    padding: 10px;
+    margin: 20px;
+    display: inline;
+}
+label {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.color-class{
+    color:red;    
+}

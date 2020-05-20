@@ -1,0 +1,26 @@
+
+    h2 {
+        color: #ea503f;
+        font-family: Arial;
+        text-align: center;
+        text-decoration: underline;
+    }
+    a {
+        text-align-last: right;
+        margin-right: 5px;
+        float: right;
+        }
+
+        .container {
+          position: relative;
+          text-align: center;
+          color: white;
+        }
+        
+        .top-right {
+          position: absolute;
+          top: 8px;
+          right: 16px;
+          color:black;
+        }
+        

@@ -1,0 +1,46 @@
+body {
+    background-image: linear-gradient(to bottom, bisque,blue);
+    
+}
+h1 {
+    color: #ea503f;
+    font-family: Arial;
+    text-align: center;
+    text-decoration: underline;
+}
+ .container {
+    padding: 20px;
+    background-color: bisque;
+    width: 500px;
+}
+header{
+    background-color: darkorchid;
+    border: 2px solid black;
+}
+
+
+button {
+    align-items: center;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 100px;
+    background-color: cadetblue;
+    margin-bottom: 10px;
+    color: blue;
+}
+input,select {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+label {
+    margin-left: 50px;
+    margin-right: 20px;
+    float: left;
+}
+.color-class{
+
+    color:red;
+    
+    }

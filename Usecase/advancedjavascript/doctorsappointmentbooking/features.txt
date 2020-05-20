@@ -1,0 +1,13 @@
+Below ES6 features implemented in the project.
+
+
+let
+const
+Arrow function
+Enhanced object properties
+Template literals
+Promise 
+Object destructring
+
+
+

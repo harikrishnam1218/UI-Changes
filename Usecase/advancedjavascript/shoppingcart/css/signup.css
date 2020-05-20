@@ -1,12 +1,12 @@
 body {
     background-color: rgb(120, 124, 124);
 }
- h1{
-   color: #ea503f;
-   font-family: Arial;
-   text-align: center;
-   
- }
+ h1 {
+    color: darkblue;
+    font-family: Arial;
+    text-align: center;
+    text-decoration: underline;
+}
  .container {
   padding: 20px;
   margin: 1px solid lightgreen;
@@ -34,6 +34,7 @@ input {
     margin-bottom: 20px;
 }
 label {
-    margin-left: 10px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 10px;
+    /* float: left; */
 }

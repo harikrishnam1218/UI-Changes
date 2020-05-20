@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "name": "HARI1218",
+      "mobile": "9176110002",
+      "email": "hari23@gmail.com",
+      "password": "123456",
+      "address": "1-14b,macahavaram",
+      "id": 1,
+	  "role":"patient"
+    }
+  ]
+ }

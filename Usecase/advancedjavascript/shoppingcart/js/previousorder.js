@@ -2,24 +2,28 @@
  * The function previousorder is used to fetch previos orders.
  * 
  */
-previousorder=()=> {
+previousOrder=()=> {
 
-    let email = sessionStorage.getItem("userId");
+    const email = sessionStorage.getItem("userId");
     if (email === null) {
         alert("Please Login again !!");
         return false;
     }
-    const url = "http://localhost:3000/orders?email="+ email;
+    const url = `http://localhost:3000/orders?email=${email}` ;
 
     let previousOrderRequest;
     if (window.XMLHttpRequest) {
         previousOrderRequest = new XMLHttpRequest();
     } else {
-        previousOrderRequest = ActiveXObject("");
+        previousOrderRequest = ActiveXObject("Microsoft.XMLHTTP");
     }
+    return new Promise(function (resolve, reject) {
     previousOrderRequest.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-
+        
+        if (this.readyState === 4) {
+            if(this.status != 200){
+                reject({ reason: `Failed to execute previousorder  Api Due to server issue, Status Code ${this.status}` });
+            }else{
             document.getElementById("headerProductId").innerHTML = " PREVIOUS ORDER LIST";
             let btable = document.getElementsByTagName("table").length;
             if (btable > 0) {
@@ -27,7 +31,7 @@ previousorder=()=> {
                 let parentEl = removeTab.parentElement;
                 parentEl.removeChild(removeTab);
             }
-
+            resolve(this.response);
             let table = document.createElement("table");
             table.id = "table";
             let tbody = document.createElement("tbody");
@@ -36,29 +40,29 @@ previousorder=()=> {
             let headTr = document.createElement("tr");
 
             let headTd1 = document.createElement("td");
-            let headTd1Text = document.createTextNode("ID")
+            const headTd1Text = document.createTextNode("ID")
             headTd1.appendChild(headTd1Text);
 
             let headTd2 = document.createElement("td");
-            let headTd2Text = document.createTextNode("PRODUCT ID");
+            const headTd2Text = document.createTextNode("PRODUCT ID");
             headTd2.appendChild(headTd2Text);
 
             let headTd3 = document.createElement("td");
-            let headTd3Text = document.createTextNode("EMAIL");
+            const headTd3Text = document.createTextNode("EMAIL");
             headTd3.appendChild(headTd3Text);
 
             let headTd4 = document.createElement("td");
-            let headTd4Text = document.createTextNode("TOTAL PRICE");
+            const headTd4Text = document.createTextNode("TOTAL PRICE");
             headTd4.appendChild(headTd4Text);
 
 
             let headTd5 = document.createElement("td");
-            let headTd5Text = document.createTextNode("QUANTITY");
+            const headTd5Text = document.createTextNode("QUANTITY");
             headTd5.appendChild(headTd5Text);
 
 
             let headTd6 = document.createElement("td");
-            let headTd6Text = document.createTextNode("ORDER DATE");
+            const headTd6Text = document.createTextNode("ORDER DATE");
             headTd6.appendChild(headTd6Text);
 
             headTr.appendChild(headTd1);
@@ -75,32 +79,32 @@ previousorder=()=> {
             const len = data.length;
             if (len > 0) {
                 for (let i = 0; i < len; i++) {
+                    const {id,productId,email,totalPrice,quantity,orderDate}=data[i];
                     let tbodyTr = document.createElement("tr");
 
                     let td1 = document.createElement("td");
-                    let td1Text = document.createTextNode(data[i].id);
+                    let td1Text = document.createTextNode(`${id}`);
                     td1.appendChild(td1Text);
 
                     let td2 = document.createElement("td");
-                    let td2Text = document.createTextNode(data[i].productId);
+                    let td2Text = document.createTextNode(`${productId}`);
                     td2.appendChild(td2Text);
 
                     let td3 = document.createElement("td");
-                    let td3Text = document.createTextNode(data[i].email);
+                    let td3Text = document.createTextNode(`${email}`);
                     td3.appendChild(td3Text);
 
                     let td4 = document.createElement("td");
-                    let td4Text = document.createTextNode(data[i].totalPrice);
+                    let td4Text = document.createTextNode(`${totalPrice}`);
                     td4.appendChild(td4Text);
 
                     let td5 = document.createElement("td");
-                    let td5Text = document.createTextNode(data[i].quantity);
+                    let td5Text = document.createTextNode(`${quantity}`);
                     td5.appendChild(td5Text);
 
                     let td6 = document.createElement("td");
-                    let td6Text = document.createTextNode(data[i].orderDate);
+                    let td6Text = document.createTextNode(`${orderDate}`);
                     td6.appendChild(td6Text);
-
 
                     tbodyTr.appendChild(td1);
                     tbodyTr.appendChild(td2);
@@ -114,7 +118,7 @@ previousorder=()=> {
                 table.appendChild(thead);
             } else {
                 let data = document.createElement("h3");
-                let noDataText = document.createTextNode("ORDER DATA NOT FOUND");
+                const noDataText = document.createTextNode("ORDER DATA NOT FOUND");
                 data.appendChild(noDataText);
                 tbody.appendChild(data);
             }
@@ -124,6 +128,9 @@ previousorder=()=> {
             body.appendChild(table);
         }
     }
+
+}
     previousOrderRequest.open("get", url, true);
     previousOrderRequest.send();
+});
 }

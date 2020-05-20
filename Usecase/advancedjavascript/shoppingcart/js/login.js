@@ -2,15 +2,14 @@
  * The loginData function will check the Authentication .if it success return to Product List
  */
  loginData=()=>{
-    let emailId=document.getElementById("emailId").value;
-    let password=document.getElementById("pwd").value;
-    console.log("Email Id  "+emailId+"\n Password "+password);
+    const emailId=document.getElementById("emailId").value;
+    const password=document.getElementById("pwd").value;
     const url=`http://localhost:3000/users?email=${emailId}&password=${password}`;
     let loginReq;
         if(window.XMLHttpRequest){
             loginReq=new XMLHttpRequest();
         }else{
-            loginReq=ActiveXObject("");
+            loginReq=ActiveXObject("Microsoft.XMLHTTP");
         }
         return new Promise(function (resolve, reject) {
         loginReq.onreadystatechange=function(){

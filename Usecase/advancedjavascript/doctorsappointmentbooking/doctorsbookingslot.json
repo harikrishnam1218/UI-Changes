@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "name": "Harikrishna",
+      "mobile": "9700608689",
+      "email": "swarupa1212@hcl.com",
+      "password": 511607,
+      "role": "doctor",
+      "id": 1
+    },
+    {
+      "name": "swarupa",
+      "mobile": "9700608689",
+      "email": "harikrishna@hcl.com",
+      "password": 622497,
+      "role": "patient",
+      "id": 2
+    }
+  ],
+  "slots": [
+    {
+      "available": false,
+      "docmail": "swarupa1212@hcl.com",
+      "date": "2020-05-21",
+      "time": "09:00",
+      "specialist": "Neuro",
+      "id": 1
+    },
+    {
+      "docmail": "swarupa1212@hcl.com",
+      "date": "2020-05-21",
+      "time": "10:00",
+      "specialist": "Neuro",
+      "available": true,
+      "id": 2
+    },
+    {
+      "docmail": "swarupa1212@hcl.com",
+      "date": "2020-05-21",
+      "time": "11:00",
+      "specialist": "Neuro",
+      "available": true,
+      "id": 3
+    }
+  ],
+  "appointment": [
+    {
+      "slotId": "1",
+      "docmail": "swarupa1212@hcl.com",
+      "date": "2020-05-21",
+      "time": "09:00",
+      "specialist": "Neuro",
+      "userId": "harikrishna@hcl.com",
+      "reason": "Test",
+      "id": 1
+    }
+  ]
+}

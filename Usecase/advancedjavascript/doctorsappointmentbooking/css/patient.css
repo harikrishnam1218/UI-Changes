@@ -1,8 +1,8 @@
 body{
-    background-color: aqua;
+    background-color: beige;
 }
-table {
-    background-color: aliceblue;
+table{
+    background-color: bisque;
 }
 table tbody tr td {
     border: 1px solid brown;
@@ -20,21 +20,23 @@ table thead tr td {
 }
 
 h1 {
-    color: #ea503f;
-    font-family: Arial;
+    color: teal;
+    font-family: INITIAL;
     text-align: center;
-
+    text-decoration: underline;
 }
 
-#button1,
-#button2,
-#button3,
-#button4 {
+header{
+    float: right;
+    color:blue;
+}
+
+button#btn {
     align-items: center;
-    width: 120px;
-    height:50px;
+    width: 100px;
     padding: 10px;
     border-radius: 10px;
-    margin: 20px 50px 20px 200px;
-    background-color: cadetblue;
+    margin-top: 20px;
+    margin-left: 100px;
+    background-color: chocolate;
 }

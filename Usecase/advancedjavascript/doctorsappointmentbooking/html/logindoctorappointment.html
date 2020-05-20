@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Login Page</title>
  <style>
  
  </style>       
- <header>
-     <a href="signuppage.html">SIGN UP</a>
- </header>
+ 
  <link href="../css/loginstyle.css" rel="stylesheet"/>
     </head>
+
     <body>
-        <center>
-            <h1>Login Form</h1>
-           
+     
          <!-- <form action=""> -->
+                <header>
+                        <button type="button" id="bhome" onclick="redirectHomepage()">HOME</button>
+                        <button type="button"id="babout" onclick="redirectAboutPage()">ABOUT US</button>
+                        <button type="button"id="blogin" onclick="redirectSignUpPage()" >SignUp</button>
+                </header>
+                <h1>Login Form</h1>
+
+    
+             <center>
             <div class="container">
                 <label for="emailId"><b>Email ID</b></label>
                 <input id="emailId" type="email" placeholder="Enter Email Id" autocomplete name="email" required><br>
@@ -21,7 +28,7 @@
                 <label for="psw"><b>Password</b></label>
                 <input id="pwd" type="password" placeholder="Enter Password" name="pwd" required><br>
           
-                <button type="submit" onclick="loginData()">Login</button>
+                <button type="button" onclick="loginData()">Login</button>
                 
               </div>
             </center>

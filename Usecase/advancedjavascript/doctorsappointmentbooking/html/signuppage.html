@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SignUp Page
+        </title>        
+         <link href="../css/signup.css" rel="stylesheet"/>
+    </head>
+    
+    <body >
+        
+            <header>
+                    <button type="button" id="bhome" onclick="redirectHomepage()">HOME</button>
+                    <button type="button"id="babout" onclick="redirectAboutPage()">ABOUT US</button>
+                    <button type="button"id="blogin" onclick="redirectLoginpage()" >Login</button>
+            </header>
+        
+        <h1><b>Registration Form</b></h1>
+        <center>
+        <form>
+                <div class="container">
+                        <div id="errname"></div>
+                        <label for="name"><b>User Name</b></label>
+                        <input id="name" type="text" placeholder="Enter Username"  autocomplete
+                         name="name" required><br>
+                       
+                         <div id="erremail"></div>
+                        <label for="email"><b>Email ID</b></label>
+                        <input id="emailId" type="email" placeholder="Enter Email ID"  autocomplete name="email" required><br>
+                       
+                        <div id="errmobile"></div> 
+                        <label for="mobile"><b>Mobile No :</b></label>
+                        <input type="text" name="countrycode"  value="+91" size="2"/> -
+                        <input id="mobile" type="number" name="mobile" size="10" required placeholder ="Enter Mobile No"
+                         autocomplete/><br>
+
+                         <label for="role"><b>Role</b></label>
+
+                         <select id="roles" class="role-width">
+                                <option  value="patient">Patient</option>
+                                <option value="doctor">Doctor</option>
+                        </select><br>
+                        <button type="button" onclick="userData()">SignUp</button>
+                        <button type="reset" name="reset">Reset</button>
+                        
+                      </div>   
+        </form>         
+    </center>
+    <script src="../js/signup.js"></script>
+</body>
+</html>

@@ -2,13 +2,13 @@
  * The signup function will register the data in data base 
  */
 signup = () => {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("emailId").value;
-    let password = document.getElementById("pwd").value;
-    let mobile = document.getElementById("mobile").value;
-    let address = document.getElementById("textarea").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("emailId").value;
+    const password = document.getElementById("pwd").value;
+    const mobile = document.getElementById("mobile").value;
+    const address = document.getElementById("textarea").value;
 
-    let passwordpattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@$&]).{8,12}$";
+    const passwordpattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@$&]).{8,12}$";
 
     if (!password.length > 0) {
         alert("please Enter Email ID");
@@ -36,14 +36,14 @@ signup = () => {
         alert("Please Enter Address");
         return false;
     }
-    var obj1 = { name, mobile, email, password, address };
+    const obj1 = { name, mobile, email, password, address };
     console.log(obj1);
 
     let registerReq;
     if (window.XMLHttpRequest) {
         registerReq = new XMLHttpRequest();
     } else {
-        registerReq = ActiveXObject("");
+        registerReq = ActiveXObject("Microsoft.XMLHTTP");
     }
     return new Promise(function (resolve, reject) {
         registerReq.onreadystatechange = function () {
@@ -55,7 +55,7 @@ signup = () => {
 
                 }
                 else {
-                    reject({ reason: "Failed the Api to execute Due to server issue" });
+                    reject({ reason: `Failed to execute save the Api Due to server issue, Status Code${this.status}` });
                 }
             }
         }
@@ -67,12 +67,12 @@ signup = () => {
     });
 }
 /**
- * the userData function is used to check the registered Email id is avaialble or not if it is not available call sign up function.
+ * The userData function is used to check the registered Email id is avaialble or not if it is not available call sign up function.
  *  else throw error message.  
  */
 userData = () => {
-    let email = document.getElementById("emailId").value;
-    let emailPattern = "[A-Za-z0-9._%+-]*(@dbs.com|@hcl.com)";
+    const email = document.getElementById("emailId").value;
+    const emailPattern = "[A-Za-z0-9._%+-]*(@dbs.com|@hcl.com)";
     if (!email.length > 0) {
         alert("Please Enter Email Id");
         return false;
@@ -92,6 +92,7 @@ userData = () => {
             if (this.readyState === 4) {
                 if (this.status === 200) {
                     let data = JSON.parse(this.response);
+                    resolve(data);
                     console.log(data);
                     const len = data.length;
                     if (!len > 0) {
